@@ -63,7 +63,7 @@ e
     | e '*' e
         {$$ = $1*$3;}
     | e '/' e
-        {if ($3 == 0) throw new Error("No puedes asignar valor a una constante"); else $$ = $1/$3;}
+        {if ($3 == 0) throw new Error("No puedes dividir por 0"); else $$ = $1/$3;}
     | e '^' e
         {$$ = Math.pow($1, $3);}
     | e '!'
